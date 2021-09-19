@@ -1,0 +1,14 @@
+# 分布式文件系统配置
+fdfs:
+  #根据自己的ip进行更改
+  ip: 10.10.27.86
+  #socket连接超时时长
+  soTimeout: 1500
+  connectTimeout: 600
+  #支持多个
+  trackerList:
+    - ${fdfs.ip}:22122
+  # fastDFS 中的 nginx 的 ip 和 port
+  # IDEA 提示使用 https,
+  # nginx 配置 SSL 请移步：
+  web-server-url: http://${fdfs.ip}:2333/
